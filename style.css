@@ -147,7 +147,7 @@ body{
   position: absolute;
   top: 665px;
   left: 700px;
-  /* background-color: rgba(243, 238, 238, 0.538); */
+  background-color: rgba(243, 238, 238, 0.538);
   width: 15vh;
   z-index: 10;
   
