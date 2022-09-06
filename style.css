@@ -1,0 +1,182 @@
+body{
+  background-image: url(https://preview.redd.it/3mqi5lo479b51.jpg?auto=webp&s=895cb4bdbfd1a6c51a8fece72def5025ee10ac67);
+  background-size: cover;
+  background-position: center;
+}
+
+.cat-pic{
+  width:80vh;
+  z-index: 1;
+  position: absolute;
+  top: 25vh;
+  left: 43vh;
+}
+.cat-pic:hover{
+  transform: scale(1.01);
+  /* cursor: grab; */
+  cursor: url(brush.cur), auto;
+}
+.cat-pic:active{
+  transform:scale(1);
+  cursor: url(brush.cur), auto;
+}
+/* SECTION brush controls */
+.brush{
+  height:4rem;
+  width:auto;
+  position: absolute;
+  top: 190px;
+  left: 1010px;
+  transform: rotate(-20deg);
+}
+.brush:hover{
+  transform: scale(1.1) rotate(-20deg);
+}
+.brushCount{
+  position: absolute;
+  top: 255px;
+  left: 1010px;
+  width:10vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(11deg);
+}
+.brushCost{
+  position: absolute;
+  top: 335px;
+  left: 990px;
+  width: 15vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(11deg);
+}
+
+/* SECTION vac controls */
+.vacuum{
+  position:absolute;
+  top: 450px;
+  left: 1000px;
+  height:17rem;
+  width:auto;
+  z-index: 10;
+}
+.vacuum:hover{
+  transform: scale(1.10);
+}
+.vacuumCost{
+  position: absolute;
+  top: 365px;
+  left: 1150px;
+  width: 15vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(10deg);
+}
+.vacuumCount{
+  position: absolute;
+  top: 280px;
+  left: 143vh;
+  width: 10vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(10deg);
+}
+/* SECTION sweater controls */
+.sweater{
+  position: absolute;
+  top: 160px;
+  left: 275px;
+  height: 11vh;
+  width:auto;
+  transform: skewY(10deg);
+}
+.sweater:hover{
+  transform: scale(1.10) skewY(10deg);
+}
+.sweaterCost{
+  position: absolute;
+  top: 250px;
+  left: 450px;
+  width: 15vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(-22deg)
+}
+.sweaterCount{
+  position: absolute;
+  top: 250px;
+  left: 275px;
+  width: 15vh;
+  background-color: rgba(243, 238, 238, 0.53);
+  transform: skewY(14deg);
+
+}
+/* SECTION pants */
+.pants{
+  position: absolute;
+  top: 295px;
+  left:28px;
+  height: 31vh;
+  width:auto;
+  transform: skewY(-20deg) skewX(45deg)
+}
+.pants:hover{
+  transform: scale(1.10) skewY(-20deg) skewX(45deg);
+}
+.pantsCost{
+  position: absolute;
+  top: 450px;
+  left:315px;
+  width: 15vh;
+  transform: skewY(-30deg) skewX(42deg);
+  background-color: rgba(243, 238, 238, 0.53);
+
+}
+.pantsCount{
+  position: absolute;
+    top: 350px;
+    left: 170px;
+    width: 15vh;
+    background-color: rgba(243, 238, 238, 0.53);
+    transform: skewY(30deg) skewX(-42deg)
+
+}
+.total-fur{
+  height:12vh;
+  position: absolute;
+  top: 675px;
+  left: 700px;
+  z-index: 1;
+}
+.hair{
+  position: absolute;
+  top: 665px;
+  left: 700px;
+  /* background-color: rgba(243, 238, 238, 0.538); */
+  width: 15vh;
+  z-index: 10;
+  
+}
+.furball{
+  height: 10vh;
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    z-index: 0;
+}
+.furball-active{
+  height:10vh;
+  position: absolute;
+  top: 65vh;
+  left: 83vh;
+  z-index: 1;
+  transform: translateY(0);
+  animation-name: furFall;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes furFall{
+0%{
+transform: translateY(0);
+}
+100%{
+transform: translateY(150px);
+}
+
+
+}

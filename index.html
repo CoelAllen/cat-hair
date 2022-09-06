@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cat Hair Collector</title>
+  </head>
+
+  <body>
+    <header class="row d-flex text-center bg-dark text-light justify-content-between g-0">
+      <div class=" counter col-md-2 pt-3 mx-3">
+            Static Cling!
+            <br> <span class="fs-1" id="autoModifiers">0</span>
+          </div>
+      
+          <div class="col-md-4">
+
+            <h1>Cat Hair Everywhere!</h1>
+            <p>A game about the joys of pet ownership</p>
+          </div>
+        <div class="counter col-md-2 pt-3 mx-3" id="totals">
+            Fur per Pet: 
+            <br><span class="fs-1" id="clickModifiers">1</span>
+          </div>
+      
+    </header>
+    <main>
+      <section class="row container-fluid">
+        <div class="col-4">
+          <!-- NOTE upgrade box -->
+          <div class="mt-5">
+            
+            <!-- SECTION one click upgrades -->
+            <div>
+              <div
+                class="row g-0 mx-2 justify-content-between align-items-center"
+              >
+                <img
+                  onclick="buyClickUpgrade('brush')"
+                  class="brush"
+                  src="brush.png"
+                  alt=""
+                />
+
+                <div class="card brushCount text-center fs-5 col-2">
+                  Brushes<span id="brush-count">0</span>
+                </div>
+                <div class="card brushCost text-center fs-5 col-2">
+                  Buy A Brush<span id="brush-cost">10</span>Hair+1
+                </div>
+              </div>
+              <div
+                class="row g-0 mx-2 align-items-center justify-content-between"
+              >
+                <img
+                  onclick="buyClickUpgrade('vacuum')"
+                  src="vacuum.png"
+                  alt=""
+                  class="vacuum"
+                />
+
+                <div class="card vacuumCount fs-5 text-center col-2">
+                  Vacs<span id="vacuum-count">0</span></div>
+                  <div class="card vacuumCost fs-5 text-center col-2">
+                    Buy A Vac<span id="vacuum-cost">20</span>Hair+10
+                  </div>
+                </div>
+              </div>
+              
+              <!-- SECTION auto upgrades -->
+              <div
+                class="row g-0 mx-2 align-items-center justify-content-between"
+              >
+                <img
+                  onclick="buyAutoUpgrade('sweater')"
+                  class="sweater"
+                  src="foldedSweater.png"
+                  alt=""
+                />
+
+                <div class="card sweaterCost text-center fs-5 col-2">
+                  Buy A Sweater<span id="sweater-price">15</span> 5 Hair/Sec
+                </div>
+                <div class="card sweaterCount text-center fs-5 col-2">
+                  Sweaters:<span id="sweater-count">0</span>
+                </div>
+              </div>
+              <div
+                
+              >
+                <img
+                  onclick="buyAutoUpgrade('black-pants')"
+                  class="pants"
+                  src="pants.png"
+                  alt=""
+                />
+
+                <div class="card pantsCost text-center fs-5 col-2">
+                  Buy Pants<span id="black-pants-price">25</span>10 Hair/Sec
+                </div>
+                <div class="card pantsCount text-center fs-5 col-2">
+                  Black Pants<span id="black-pants-count">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- NOTE clickable cat pic -->
+
+        <div class="col-6">
+          <img class="cat-pic" onclick="petCat()" src="cat.png" alt="" />
+          <img id="furFall" class="furball" src="furball.png" alt="" />
+        </div>
+      </section>
+      <!-- NOTE totals row at bottom -->
+      <section class="row d-flex justify-content-between">
+        
+        <div class="col-md-4 mt-5 text-center fs-5 hair">
+          HAIR!: <span id="hairCount">0</span>
+        </div>
+        <div>
+          <img class="total-fur" id="totalFur" src="furball.png" alt="" />
+        </div>
+      </section>
+    </main>
+  
+    <script src="app.js"></script>
+  </body>
+</html>
